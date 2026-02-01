@@ -1,16 +1,17 @@
 --------------------------------------------------------------------------------
--- reiplemented based on the book code
+-- reiplemented based on the book code to have nicer output and also solve
+-- chapter 2 exercises.
 --------------------------------------------------------------------------------
 N = 8 -- board size
 
 -- solution is an array contains N numbers, index is row, value is column.
-function show(board)
+local function show(board)
 	local L = #board
 	-- revserse the array because when showing chess board,
 	-- a1 square is always the bottom left.
 	for i = 1, L / 2 do
-		x = board[i]
-		y = board[L - i + 1]
+		local x = board[i]
+		local y = board[L - i + 1]
 		board[i] = y
 		board[L - i + 1] = x
 	end
@@ -36,16 +37,17 @@ function show(board)
 		end
 		io.write("\n")
 	end
+	io.write("\n")
 end
 
 -- check if it's ok to place a new queen at (r, c).
-function isPlaceOk(board, r, c)
+local function isPlaceOk(board, r, c)
 	for x = 1, r - 1 do
-		y = board[x]
+		local y = board[x]
 		if
 			(y == c) -- same column
-			or (r - x == c - y)
-			or (r - x == y - c)
+			or (r - x == c - y) -- same diag forward
+			or (r - x == y - c) -- same diag backward
 		then
 			return false
 		end
@@ -54,17 +56,17 @@ function isPlaceOk(board, r, c)
 	return true
 end
 
-function addQueen(board, r)
+-- quickStop, if true, cause the program to stop at the first solution
+local function addQueen(board, r, quickStop)
 	if r > N then
 		show(board)
-		-- NOTE (tai): change this line to return false to print all solutions
-		return true
+		return quickStop
 	else
 		for c = 1, N do
 			if isPlaceOk(board, r, c) then
 				board[r] = c
-				if addQueen(board, r + 1) then
-					return true
+				if addQueen(board, r + 1, quickStop) then
+					return quickStop
 				end
 			end
 		end
@@ -72,4 +74,4 @@ function addQueen(board, r)
 	return false
 end
 
-addQueen({}, 1)
+addQueen({}, 1, true)
