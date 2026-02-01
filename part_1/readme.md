@@ -135,17 +135,26 @@ because it won't continue with an invalid board.
 
 ## Chapter 3. Numbers
 
-- [ ] Numerals
-- [ ] Arithmetic Operators
-- [ ] Relational Operators
-- [ ] The Mathematical Library
-  - [ ] Random-number generator
-  - [ ] Rounding functions
-- [ ] Representation Limit
-  - [ ] Conversions
-- [ ] Precedence
-- [ ] Lua Before Integers
-- [ ] Exercises
+- [x] Numerals
+  - lua 5.3 separates `integer` and `float`
+  - `string.format` has `%a` for showing hex format fo a float.
+- [x] Arithmetic Operators
+  - Floor division is `//`.
+  - Exponentiation `^` always operate with float, `2^2` is a float.
+- [x] Relational Operators
+  - `~=` instead of `!=`.
+- [x] The Mathematical Library
+  - [x] Random-number generator
+  - [x] Rounding functions
+    - Function in lula can return multiple values.
+- [x] Representation Limit
+- [x] Conversions
+  - Force int to float: `+0.0`.
+  - Force float to int: OR with zero `2^2 | 0`, raise error if conversion fails.
+- [x] Precedence
+- [x] Lua Before Integers
+
+### Exercises
 
 ## Chapter 4. Strings
 
