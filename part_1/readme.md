@@ -111,7 +111,23 @@ print(arg[0])
 
 ## Chapter 2. Interlude: The Eight-Queen Puzzle
 
-- [ ] Exercises
+### Exercises
+
+#### Exercise 2.1
+
+> Modify the eight-queen program so that it stops after printing the first
+> solution.
+
+See [./02_eight_queens.lua](./02_eight_queens.lua).
+
+#### Exercise 2.2
+
+> An alternative implementation for the eight-queen problem would be to generate
+> all possible permutations of 1 to 8 and, for each permutation, to check
+> whether it is valid. Change the program to use this approach. How does the
+> performance of the new program compare with the old one? (Hint: compare the
+> total number of permutations with the number of times that the original
+> program calls the function `isplaceok`.)
 
 ## Chapter 3. Numbers
 
