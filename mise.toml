@@ -1,0 +1,7 @@
+[tools]
+lua = "5.5"
+watchexec = "2.3.3"
+stylua = "latest"
+lefthook = "latest"
+node = "lts"
+"npm:prettier" = "latest"

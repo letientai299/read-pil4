@@ -1,0 +1,10 @@
+pre-commit:
+  commands:
+    stylua:
+      glob: "*.lua"
+      run: stylua {staged_files}
+      stage_fixed: true
+    prettier:
+      glob: "*.md"
+      run: prettier --write {staged_files}
+      stage_fixed: true
