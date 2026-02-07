@@ -1,0 +1,65 @@
+" :Markserv / <leader>vo - Open the current file in Firefox via a local
+" markserv instance (http://localhost:8642). Uses git to resolve the
+" repo-relative path of the current file.
+command! Markserv silent :!open -a Firefox http://localhost:8642/$(git ls-files --cached --others --full-name %)
+nnoremap <leader>vo :Markserv<CR>
+
+" :LuaRun / <leader>vr - Execute the Lua code fence under the cursor and
+" show the output in a temporary horizontal split (LuaOutput) at the bottom.
+" The cursor remains in the editing buffer after execution.
+" Guarded with exists() to avoid E127 when localvimrc re-sources this file
+" while the function is in use.
+if !exists('*LuaRunCodeFence')
+function LuaRunCodeFence() abort
+  let save_pos = getpos('.')
+  let curr_line = line('.')
+
+  " Search backward for ```lua
+  let fence_start = search('^```lua', 'bnW')
+  if fence_start == 0
+    echohl ErrorMsg | echo 'Not inside a Lua code fence' | echohl None
+    return
+  endif
+
+  " Search forward from fence_start for closing ```
+  let fence_end = search('^```$', 'nW', 0, 0)
+  if fence_end == 0 || fence_end <= fence_start
+    echohl ErrorMsg | echo 'Could not find closing code fence' | echohl None
+    return
+  endif
+
+  " Verify cursor is between the fences
+  if curr_line <= fence_start || curr_line >= fence_end
+    echohl ErrorMsg | echo 'Not inside a Lua code fence' | echohl None
+    return
+  endif
+
+  " Extract code lines
+  let code_lines = getline(fence_start + 1, fence_end - 1)
+  let tmpfile = tempname() . '.lua'
+  call writefile(code_lines, tmpfile)
+
+  let output = systemlist('lua ' . shellescape(tmpfile))
+  call delete(tmpfile)
+
+  " Close any existing LuaOutput buffer
+  let existing = bufnr('LuaOutput')
+  if existing != -1
+    execute 'silent! bwipeout!' existing
+  endif
+
+  " Open horizontal split at bottom with output
+  botright new
+  setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile
+  file LuaOutput
+  call setline(1, output)
+  setlocal nomodifiable
+
+  " Return cursor to the original window
+  wincmd p
+  call setpos('.', save_pos)
+endfunction
+endif
+
+command! LuaRun call LuaRunCodeFence()
+nnoremap <leader>vr :LuaRun<CR>
