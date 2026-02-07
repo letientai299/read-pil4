@@ -19,7 +19,7 @@
 - [x] Precedence
 - [x] Lua Before Integers
 
-## Exercises
+## Exercises (page 34 - 35)
 
 ### Exercise 3.1
 

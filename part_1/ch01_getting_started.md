@@ -32,7 +32,7 @@
   - Program `arg` contains negative indices, `0` is the program file name,
     positive indices are its args, negative indice are for the lua executable.
 
-## Exercises
+## Exercises (page 22 - 23)
 
 ### Exercise 1.1
 
@@ -99,7 +99,7 @@ Parentheses are necessary to avoid confusions. `(not z)` doesn't need
 parentheses, but `(not y)` need that, otherwise, it's not easy to not whether
 `not y and x` mean `(not y) and x` or `not (y and x)`.
 
-## Exercise 1.8
+### Exercise 1.8
 
 > Write a simple script that prints its own name without knowing it in advance.
 

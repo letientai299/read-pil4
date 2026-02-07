@@ -1,6 +1,6 @@
 # Chapter 2. Interlude: The Eight-Queen Puzzle
 
-## Exercises
+## Exercises (page 26)
 
 ### Exercise 2.1
 
