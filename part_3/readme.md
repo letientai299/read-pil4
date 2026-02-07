@@ -1,82 +1,11 @@
 # Lua-isms
 
-## Chapter 18. Iterators and the Generic for
-
-- [ ] Iterators and Closures
-- [ ] The Semantics of the Generic for
-- [ ] Stateless Iterators
-- [ ] Traversing Tables in Order
-- [ ] True Iterators
-- [ ] Exercises
-
-## Chapter 19. Interlude: Markov Chain Algorithm
-
-- [ ] Exercises
-
-## Chapter 20. Metatables and Metamethods
-
-- [ ] Arithmetic Metamethods
-- [ ] Relational Metamethods
-- [ ] Library-Defined Metamethods
-- [ ] Table-Access Metamethods
-  - [ ] The \_\_index metamethod
-  - [ ] The \_\_newindex metamethod
-  - [ ] Tables with default values
-  - [ ] Tracking table accesses
-  - [ ] Read-only tables
-- [ ] Exercises
-
-## Chapter 21. Object-Oriented Programming
-
-- [ ] Classes
-- [ ] Inheritance
-- [ ] Multiple Inheritance
-- [ ] Privacy
-- [ ] The Single-Method Approach
-- [ ] Dual Representation
-- [ ] Exercises
-
-## Chapter 22. The Environment
-
-- [ ] Global Variables with Dynamic Names
-- [ ] Global-Variable Declarations
-- [ ] Non-Global Environments
-- [ ] Using \_ENV
-- [ ] Environments and Modules
-- [ ] \_ENV and load
-- [ ] Exercises
-
-## Chapter 23. Garbage
-
-- [ ] Weak Tables
-- [ ] Memorize Functions
-- [ ] Object Attributes
-- [ ] Revisiting Tables with Default Values
-- [ ] Ephemeron Tables
-- [ ] Finalizers
-- [ ] The Garbage Collector
-- [ ] Controlling the Pace of Collection
-- [ ] Exercises
-
-## Chapter 24. Coroutines
-
-- [ ] Coroutine Basics
-- [ ] Who Is the Boss?
-- [ ] Coroutines as Iterators
-- [ ] Event-Driven Programming
-- [ ] Exercises
-
-## Chapter 25. Reflection
-
-- [ ] Introspective Facilities
-  - [ ] Accessing local variables
-  - [ ] Accessing non-local variables
-  - [ ] Accessing other coroutines
-- [ ] Hooks
-- [ ] Profiles
-- [ ] Sandboxing
-- [ ] Exercises
-
-## Chapter 26. Interlude: Multithreading with Coroutines
-
-- [ ] Exercises
+- [ ] [Chapter 18. Iterators and the Generic for](./ch18_iterators_and_the_generic_for.md)
+- [ ] [Chapter 19. Interlude: Markov Chain Algorithm](./ch19_markov_chain_algorithm.md)
+- [ ] [Chapter 20. Metatables and Metamethods](./ch20_metatables_and_metamethods.md)
+- [ ] [Chapter 21. Object-Oriented Programming](./ch21_object_oriented_programming.md)
+- [ ] [Chapter 22. The Environment](./ch22_the_environment.md)
+- [ ] [Chapter 23. Garbage](./ch23_garbage.md)
+- [ ] [Chapter 24. Coroutines](./ch24_coroutines.md)
+- [ ] [Chapter 25. Reflection](./ch25_reflection.md)
+- [ ] [Chapter 26. Interlude: Multithreading with Coroutines](./ch26_multithreading_with_coroutines.md)

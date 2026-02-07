@@ -1,61 +1,9 @@
 # The C API
 
-## Chapter 27. An Overview of the C API
-
-- [ ] A First Example
-- [ ] The Stack
-  - [ ] Pushing elements
-  - [ ] Querying elements
-  - [ ] Other stack operations
-- [ ] Error Handling with the C API
-  - [ ] Error handling in application code
-  - [ ] Error handling in library code
-- [ ] Memory Allocation
-- [ ] Exercises
-
-## Chapter 28. Extending Your Application
-
-- [ ] The Basics
-- [ ] Table Manipulation
-  - [ ] Some short cuts
-- [ ] Calling Lua Functions
-- [ ] A Generic Call Function
-- [ ] Exercises
-
-## Chapter 29. Calling C from Lua
-
-- [ ] C Functions
-- [ ] Continuations
-- [ ] C Modules
-- [ ] Exercises
-
-## Chapter 30. Techniques for Writing C Functions
-
-- [ ] Array Manipulation
-- [ ] String Manipulation
-- [ ] Storing State in C Functions
-  - [ ] The registry
-  - [ ] Upvalues
-  - [ ] Shared upvalues
-- [ ] Exercises
-
-## Chapter 31. User-Defined Types in C
-
-- [ ] Userdata
-- [ ] Metatables
-- [ ] Object-Oriented Access
-- [ ] Array Access
-- [ ] Light Userdata
-- [ ] Exercises
-
-## Chapter 32. Managing Resources
-
-- [ ] A Directory Iterator
-- [ ] An XML Parser
-- [ ] Exercises
-
-## Chapter 33. Threads and States
-
-- [ ] Multiple Threads
-- [ ] Lua States
-- [ ] Exercises
+- [ ] [Chapter 27. An Overview of the C API](./ch27_an_overview_of_the_c_api.md)
+- [ ] [Chapter 28. Extending Your Application](./ch28_extending_your_application.md)
+- [ ] [Chapter 29. Calling C from Lua](./ch29_calling_c_from_lua.md)
+- [ ] [Chapter 30. Techniques for Writing C Functions](./ch30_techniques_for_writing_c_functions.md)
+- [ ] [Chapter 31. User-Defined Types in C](./ch31_user_defined_types_in_c.md)
+- [ ] [Chapter 32. Managing Resources](./ch32_managing_resources.md)
+- [ ] [Chapter 33. Threads and States](./ch33_threads_and_states.md)
